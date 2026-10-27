@@ -1,0 +1,35 @@
+{
+  "cli": {
+    "version": ">= 12.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://akmxzofpvapyjrcnegnk.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrbXh6b2ZwdmFweWpyY25lZ25rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4MjAzMTUsImV4cCI6MjEwODM5NjMxNX0.qaXAktrBBlwBklfNVG1Y2BsGOC30PJ6N-o4EWeLczfo",
+        "EXPO_PUBLIC_ALLOWED_EMAIL_DOMAIN": "student.uet.edu.pk",
+        "EXPO_PUBLIC_PRIVACY_URL": "https://m-shoaib2005-cs.github.io/uniswap/"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://akmxzofpvapyjrcnegnk.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFrbXh6b2ZwdmFweWpyY25lZ25rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4MjAzMTUsImV4cCI6MjEwODM5NjMxNX0.qaXAktrBBlwBklfNVG1Y2BsGOC30PJ6N-o4EWeLczfo",
+        "EXPO_PUBLIC_ALLOWED_EMAIL_DOMAIN": "student.uet.edu.pk",
+        "EXPO_PUBLIC_PRIVACY_URL": "https://m-shoaib2005-cs.github.io/uniswap/"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

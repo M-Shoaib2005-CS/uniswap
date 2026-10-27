@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open UniSwap</title>
+<style>
+  :root { --ink:#101828; --muted:#667085; --primary:#1E3A8A; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#F2F4F7; --muted:#98A2B3; --primary:#3B5BDB; --bg:#0B1020; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; display:flex; min-height:100vh; align-items:center; justify-content:center; text-align:center; }
+  main { max-width:380px; padding:24px; }
+  h1 { font-size:24px; margin:0 0 8px; }
+  p { color:var(--muted); margin:8px 0 24px; }
+  a.btn { display:inline-block; background:var(--primary); color:#fff; text-decoration:none; padding:14px 28px; border-radius:12px; font-weight:600; }
+  .small { font-size:14px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Opening UniSwap…</h1>
+  <p id="msg">If the app does not open by itself, tap the button.</p>
+  <a class="btn" id="open" href="#">Open UniSwap</a>
+  <p class="small" id="hint">On a computer? Your email is confirmed. Return to the app on your phone and tap <b>I've verified, continue</b>.</p>
+</main>
+<script>
+  // Pass everything Supabase put after ? and # (tokens, type, errors) straight to the app.
+  var target = 'uniswap://auth-callback' + location.search + location.hash;
+  var btn = document.getElementById('open');
+  btn.href = target;
+  var failed = /[?#&]error=/.test(location.search + location.hash);
+  if (failed) {
+    document.getElementById('title').textContent = 'This link did not work';
+    document.getElementById('msg').textContent = 'It may have expired or already been used. Open UniSwap and request a new one.';
+  }
+  setTimeout(function () { window.location.href = target; }, 300);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "UniSwap",
+    "slug": "uniswap",
+    "scheme": "uniswap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "pk.edu.uet.uniswap",
+      "softwareKeyboardLayoutMode": "resize",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": false,
+          "data": [{ "scheme": "uniswap" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": ["expo-router", "expo-font", "expo-secure-store"],
+    "experiments": { "typedRoutes": false }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "UniSwap",
+    "slug": "uniswap",
+    "owner": "muhammad-shoaib",
+    "scheme": "uniswap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "pk.edu.uet.uniswap",
+      "softwareKeyboardLayoutMode": "resize",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": ["CAMERA", "POST_NOTIFICATIONS"],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": false,
+          "data": [{ "scheme": "uniswap" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "backgroundColor": "#FFFFFF",
+          "dark": { "image": "./assets/splash-icon.png", "backgroundColor": "#FFFFFF" }
+        }
+      ],
+      ["expo-image-picker", { "cameraPermission": "UniSwap uses the camera so you can photograph items you list.", "photosPermission": "UniSwap needs your photos so you can attach them to listings and posts." }],
+      ["expo-notifications", { "icon": "./assets/notification-icon.png", "color": "#1E3A8A" }]
+    ],
+    "experiments": { "typedRoutes": false },
+    "extra": { "eas": { "projectId": "44e6b2ed-0735-4755-adb8-e995e508ee09" } }
+  }
+}
